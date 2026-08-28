@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>theo4cars</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<nav>
+  <a href="#Start" class="logo">
+    <img src="img/logo_transparent.png" alt="theo4cars Logo">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#Start" class="active">Start</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#about">Über mich</a></li>
+    <li><a href="#Kontakt">Kontakt</a></li>
+  </ul>
+  <div class="nav-socials">
+    <a href="https://www.tiktok.com/@theo4cars" title="TikTok" aria-label="TikTok">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/theo4cars" title="Instagram" aria-label="Instagram">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+  </div>
+  <div class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#Start" onclick="closeMobile()">Start</a>
+  <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
+  <a href="#about" onclick="closeMobile()">Über mich</a>
+  <a href="#Kontakt" onclick="closeMobile()">Kontakt</a>
+  <div class="mob-socials">
+    <a href="https://www.tiktok.com/@theo4cars" title="TikTok">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/theo4cars" title="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+  </div>
+</div>
+
+
+<section id="Start">
+  <div class="hero-image-wrap fade-up">
+    <img id="heroImage" src="img/hero.jpg" alt="theo4cars Hero Bild">
+  </div>
+  <div class="hero-text fade-up">
+    
+    <h1>Passion<br>for <span>Cars.</span></h1>
+    
+    <p>Automotive photography, Fotoshootings und Events — festgehalten durch die Linse von Theo.</p>
+    <a href="#about" class="hero-cta">Mehr über mich</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="portfolio">
+  <div style="max-width:1200px;margin:0 auto;">
+    <p class="section-label fade-up">Meine Arbeiten</p>
+    <h2 class="section-title fade-up">Portfolio</h2>
+
+    <div class="portfolio-filters fade-up" id="portfolioFilters">
+      <button class="filter-btn active" data-filter="all">Alle Fotos</button>
+      <button class="filter-btn" data-filter="shooting">Fotoshootings</button>
+      <button class="filter-btn" data-filter="event">Events</button>
+      <button class="filter-btn" data-filter="spot">Spots</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <div class="portfolio-item fade-up" data-category="event" onclick="openGallery('golf')">
+        <img src="img/golf.jpg" alt="Ferrari und Golf"/>
+         <div class="portfolio-overlay"><span>Ferrari und Golf</span></div>
+</div>
+
+      <div class="portfolio-item fade-up" data-category="shooting" onclick="openGallery('bmw')">
+  <img src="img/BMW.jpg" alt="BMW M5 und M4"/>
+  <div class="portfolio-overlay"><span>BMW M5 und M4</span></div>
+</div>
+
+      <div class="portfolio-item fade-up" data-category="spot" onclick="openGallery('mclaren')">
+        <img src="img/720s.jpg" alt="McLaren 720s"/>
+        <div class="portfolio-overlay"><span>McLaren 720s</span></div>
+</div>
+
+      
+      <div class="portfolio-item fade-up" data-category="event" onclick="openGallery('aarberg')">
+        <img src="img/Aarberg.jpg" alt="Ferrari Treffen Aarberg"/>
+         <div class="portfolio-overlay"><span>Ferrari Treffen Aarberg</span></div>
+</div>
+
+      <div class="portfolio-item fade-up" data-category="shooting" onclick="openGallery('e63')">
+        <img src="img/E63.jpg" alt="Mercedes E63"/>
+        <div class="portfolio-overlay"><span>Mercedes E63</span></div>
+      </div>
+
+      <div class="portfolio-item fade-up" data-category="shooting" onclick="openGallery('rs4')">
+        <img src="img/RS4.jpg" alt="Audi RS4"/>
+        <div class="portfolio-overlay"><span>Audi RS4</span></div>
+      </div>
+
+      <div class="portfolio-item portfolio-extra extra-hidden fade-up" data-category="shooting" onclick="openGallery('fordgt')">
+        <img src="img/Ford GT MKIV.jpg" alt="Ford GT MKIV"/>
+        <div class="portfolio-overlay"><span>Ford GT MKIV</span></div>
+      </div>
+
+
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="shooting" onclick="openGallery('huracan')">
+        <img src="img/Huracan.jpg" alt="Lamborghini Huracán"/>
+        <div class="portfolio-overlay"><span>Lamborghini Huracán</span></div>
+      </div>
+
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="spot" onclick="openGallery('chiron')">
+        <img src="img/Chiron.jpg" alt="Bugatti Chiron"/>
+        <div class="portfolio-overlay"><span>Bugatti Chiron</span></div>
+      </div>
+
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="shooting" onclick="openGallery('gt3rs')">
+        <img src="img/GT3RS.jpg" alt="Porsche 992 GT3RS"/>
+        <div class="portfolio-overlay"><span>Porsche 992 GT3RS</span></div>
+      </div>
+
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" onclick="openGallery('theice')">
+        <img src="img/Theice.jpg" alt="Agera Prototype"/>
+        <div class="portfolio-overlay"><span>The ICE 2025</span></div>
+      </div>
+
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" onclick="openGallery('como')">
+        <img src="img/Como.jpg" alt="Como Porsche"/>
+        <div class="portfolio-overlay"><span>FuoriConcorso 2026</span></div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;">
+      <button class="btn-more" id="btnMore" onclick="togglePortfolio()">
+        <span id="btnMoreText">Mehr anzeigen</span>
+        <svg id="btnMoreIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition:transform 0.3s"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-image-wrap fade-up">
+      
+      <img src="img/Theo.jpg" alt="Foto von Theo">
+    </div>
+    <div class="about-text fade-up">
+      <p class="section-label" style="color:var(--orange)">Über mich</p>
+
+      <h2 class="section-title">Hallo, ich bin<br>Theo.</h2>
+      
+      <p>Ich heisse <strong style="color:var(--white)">Theo</strong>, komme aus <strong style="color:var(--white)">Bern</strong> und bin <strong style="color:var(--white)">Mediamatiker</strong> im ersten Lehrjahr.</p>
+      <p>Auf <strong style="color:var(--white)">@theo4cars</strong> teile ich meine Leidenschaft für Autos und Fotografie. Mit meiner Kamera halte ich besondere Fahrzeuge und schöne Momente fest und teile meine Begeisterung mit anderen.</p>
+      <p>Ob Fotoshootings, Car Events oder interessante Autos, die ich unterwegs entdecke. Ich versuche jeden Moment so einzufangen, dass die Stimmung und die Details gut zur Geltung kommen.</p>
+      <p> <strong style="color:var(--white)">Fun Fact:</strong> Die Zahl „4“ in @theo4cars hat eine besondere Bedeutung. Sie steht für „Four“ und verbindet sich durch die ähnliche Aussprache mit dem Wort „For“. So entstand der Name <strong style="color:var(--white)">"theo for cars"</strong>.</p>
+      <div class="about-stats">
+        
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Shootings</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Events</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5k+</div>
+          <div class="stat-label">Followers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Kontakt -->
+<section id="Kontakt">
+  <div class="Kontakt-inner">
+    <p class="section-label fade-up">Kontakt</p>
+    
+    <h2 class="section-title fade-up">Schreib mir.</h2>
+    
+    <p class="Kontakt-intro fade-up">Interesse an einem Fotoshooting, einer Zusammenarbeit oder einfach Fragen? Ich freue mich auf deine Nachricht.</p>
+
+    <form id="KontaktForm" novalidate>
+      <div class="form-row">
+        <div class="form-group fade-up">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Dein Name" required />
+        </div>
+        <div class="form-group fade-up">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" placeholder="deine@email.ch" required />
+        </div>
+      </div>
+      <div class="form-group fade-up">
+        
+        <label for="subject">Betreff</label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected hidden>Wähle einen Betreff</option>
+          <option value="shooting">Fotoshooting Anfrage</option>
+          <option value="event">Event Kooperation</option>
+          <option value="social">Social Media</option>
+          <option value="other">Sonstiges</option>
+        </select>
+      </div>
+      <div class="form-group fade-up">
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message" placeholder="Deine Nachricht..." required></textarea>
+      </div>
+      <button type="submit" class="btn-submit fade-up">Absenden</button>
+      <div class="form-success" id="formSuccess">
+        ✓ Nachricht gesendet! Ich melde mich so bald wie möglich.
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<footer>
+  
+  <a href="#Start" class="logo">
+    <img src="img/logo_transparent.png" alt="theo4cars Logo">
+  </a>
+  
+  <p>© 2026 theo4cars · Alle Rechte vorbehalten</p>
+  <!-- RECHTLICHES: Links zu Impressum & Datenschutzerklärung -->
+  <p class="footer-legal" style="margin-top:6px;">
+    <a href="impressum.html" style="color:var(--white);opacity:0.7;text-decoration:none;">Impressum</a>
+    <span style="opacity:0.4;"> · </span>
+    <a href="datenschutz.html" style="color:var(--white);opacity:0.7;text-decoration:none;">Datenschutzerklärung</a>
+  </p>
+  <div class="footer-socials">
+    
+    <a href="https://www.tiktok.com/@theo4cars" title="TikTok">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/theo4cars" title="Instagram">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+  </div>
+</footer>
+
+<div class="gallery-overlay" id="galleryOverlay">
+  <div class="gal-header">
+    <div class="gal-title" id="galTitle">BMW M4 und <span>M5</span></div>
+    <button class="gal-close" onclick="closeGallery()" aria-label="Schliessen">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="gal-body">
+    <div class="gal-count" id="galCount"></div>
+    <div class="gal-grid" id="galGrid"></div>
+  </div>
+</div>
+
+<div class="photo-viewer" id="photoViewer">
+  <button class="pv-close" onclick="closePhotoViewer()" aria-label="Schliessen">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="pv-arrow pv-prev" onclick="pvNavigate(-1)" aria-label="Vorheriges">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <img id="pvImg" src="" alt="" />
+  <button class="pv-arrow pv-next" onclick="pvNavigate(1)" aria-label="Nächstes">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+</div>
+
+<script>
+
+  const HERO_IMAGES = [
+    'img/hero.jpg',
+    'img/hero2.jpg',
+    'img/hero3.jpg',
+    'img/hero4.jpg',
+  ].filter(Boolean);
+
+  const heroImage = document.getElementById('heroImage');
+  let heroIndex = 0;
+
+  function changeHeroImage() {
+    if (HERO_IMAGES.length < 2) return;
+
+    const nextIndex = (heroIndex + 1) % HERO_IMAGES.length;
+    const nextImage = new Image();
+    nextImage.src = HERO_IMAGES[nextIndex];
+    nextImage.onload = () => {
+      heroImage.classList.add('is-changing');
+      setTimeout(() => {
+        heroImage.src = HERO_IMAGES[nextIndex];
+        heroIndex = nextIndex;
+        heroImage.classList.remove('is-changing');
+      }, 800);
+    };
+  }
+
+  if (HERO_IMAGES.length > 1) {
+    setInterval(changeHeroImage, 6000);
+  }
+
+  const GALLERIES = {
+    golf: {
+      title: 'Ferrari und Golf',
+      photos: [
+        'img/golf.jpg',
+        'img/golf2.jpg',
+        'img/golf3.jpg',
+        'img/golf4.jpg',
+        'img/golf5.jpg',
+        'img/golf6.jpg',
+        'img/golf7.jpg',
+        'img/golf8.jpg',
+        'img/golf9.jpg',
+        'img/golf10.jpg',
+      ]
+    },
+    bmw: {
+      title: 'BMW M4 und M5',
+      photos: [
+        'img/BMW.jpg',
+        'img/BMW_2.jpg',
+        'img/BMW_3.jpg',
+        'img/BMW_4.jpg',
+        'img/BMW_5.jpg',
+        'img/BMW_6.jpg',
+      ]
+    },
+    mclaren: {
+      title: 'McLaren 720s',
+      photos: [
+        'img/720s.jpg',
+        'img/720s_2.jpg',
+        'img/720s_3.jpg',
+        'img/720s_4.jpg',
+        'img/720s_5.jpg',
+        'img/720s_6.jpg',
+      ]
+    },
+    aarberg: {
+      title: 'Ferrari Treffen Aarberg',
+      photos: [
+        'img/Aarberg.jpg',
+        'img/Aarberg_2.jpg',
+        'img/Aarberg_3.jpg',
+        'img/Aarberg_4.jpg',
+        'img/Aarberg_5.jpg',
+        'img/Aarberg_6.jpg',
+        'img/Aarberg_7.jpg',
+        'img/Aarberg_8.jpg',
+        'img/Aarberg_9.jpg',
+        'img/Aarberg_10.jpg',
+        'img/Aarberg_11.jpg',
+      ]
+    },
+    e63: {
+      title: 'Mercedes E63',
+      photos: [
+        'img/E63.jpg',
+        'img/E63_2.jpg',
+        'img/E63_3.jpg',
+        'img/E63_4.jpg',
+        'img/E63_5.jpg',
+        'img/E63_6.jpg',
+      ]
+    },
+    rs4: {
+      title: 'Audi RS4',
+      photos: [
+        'img/RS4.jpg',
+        'img/RS4_2.jpg',
+        'img/RS4_3.jpg',
+        'img/RS4_4.jpg',
+        'img/RS4_5.jpg',
+        'img/RS4_6.jpg',
+      ]
+    },
+    fordgt: {
+      title: 'Ford GT MKIV',
+      photos: [
+        'img/Ford GT MKIV.jpg',
+        'img/Ford GT MKIV_2.jpg',
+        'img/Ford GT MKIV_3.jpg',
+        'img/Ford GT MKIV_4.jpg',
+        'img/Ford GT MKIV_5.jpg',
+        'img/Ford GT MKIV_6.jpg',
+      ]
+    },
+    huracan: {
+      title: 'Lamborghini Huracán',
+      photos: [
+        'img/Huracan.jpg',
+        'img/Huracan_2.jpg',
+        'img/Huracan_3.jpg',
+        'img/Huracan_4.jpg',
+        'img/Huracan_5.jpg',
+        'img/Huracan_6.jpg',
+      ]
+    },
+    chiron: {
+      title: 'Bugatti Chiron',
+      photos: [
+        'img/Chiron.jpg',
+        'img/Chiron_2.jpg',
+        'img/Chiron_3.jpg',
+      ]
+    },
+    gt3rs: {
+      title: 'Porsche 992 GT3RS',
+      photos: [
+        'img/GT3RS.jpg',
+        'img/GT3RS_2.jpg',
+        'img/GT3RS_3.jpg',
+        'img/GT3RS_4.jpg',
+        'img/GT3RS_5.jpg',
+        'img/GT3RS_6.jpg',
+        'img/GT3RS_7.jpg',
+        'img/GT3RS_8.jpg',
+      ]
+    },
+    theice: {
+      title: 'The ICE 2025',
+      photos: [
+        'img/Theice.jpg',
+        'img/Theice_2.jpg',
+        'img/Theice_3.jpg',
+        'img/Theice_4.jpg',
+        'img/Theice_5.jpg',
+        'img/Theice_6.jpg',
+        'img/Theice_7.jpg',
+        'img/Theice_8.jpg',
+        'img/Theice_9.jpg',
+      ]
+    },
+    como: {
+      title: 'FuoriConcorso 2026',
+      photos: [
+        'img/Como.jpg',
+        'img/Como_2.jpg',
+        'img/Como_3.jpg',
+        'img/Como_4.jpg',
+        'img/Como_5.jpg',
+        'img/Como_6.jpg',
+        'img/Como_7.jpg',
+        'img/Como_8.jpg',
+        'img/Como_9.jpg',
+        'img/Como_10.jpg',
+        'img/Como_11.jpg',
+        'img/Como_12.jpg',
+        'img/Como_13.jpg',
+        'img/Como_14.jpg',
+        'img/Como_15.jpg',
+        'img/Como_16.jpg',
+        'img/Como_17.jpg',
+        'img/Como_18.jpg',
+        'img/Como_19.jpg',
+        'img/Como_20.jpg',
+      ]
+    },
+  };
+
+
+  let currentGallery = null;
+  let pvIndex = 0;
+
+  function openGallery(key) {
+    const gal = GALLERIES[key];
+    if (!gal) return;
+    currentGallery = gal;
+
+
+    const words = gal.title.split(' ');
+    const first = words.shift();
+    document.getElementById('galTitle').innerHTML =
+      '<span>' + first + '</span>' + (words.length ? ' ' + words.join(' ') : '');
+
+    const n = gal.photos.length;
+    document.getElementById('galCount').textContent = n + (n === 1 ? ' Foto' : ' Fotos');
+
+    const grid = document.getElementById('galGrid');
+    grid.innerHTML = '';
+    gal.photos.forEach((src, i) => {
+      const div = document.createElement('div');
+      div.className = 'gal-photo';
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = gal.title + ' – Foto ' + (i + 1);
+      img.loading = 'lazy';
+      div.appendChild(img);
+      div.addEventListener('click', () => openPhotoViewer(i));
+      grid.appendChild(div);
+    });
+
+    document.getElementById('galleryOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeGallery() {
+    document.getElementById('galleryOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function openPhotoViewer(index) {
+    pvIndex = index;
+    renderPhotoViewer();
+    document.getElementById('photoViewer').classList.add('active');
+  }
+
+  function closePhotoViewer() {
+    document.getElementById('photoViewer').classList.remove('active');
+  }
+
+  function renderPhotoViewer() {
+    const img = document.getElementById('pvImg');
+    img.src = currentGallery.photos[pvIndex];
+    img.alt = currentGallery.title + ' – Foto ' + (pvIndex + 1);
+  }
+
+  function pvNavigate(dir) {
+    const n = currentGallery.photos.length;
+    pvIndex = (pvIndex + dir + n) % n;
+    renderPhotoViewer();
+  }
+
+  document.addEventListener('keydown', e => {
+    const pv = document.getElementById('photoViewer');
+    const gal = document.getElementById('galleryOverlay');
+    if (pv.classList.contains('active')) {
+      if (e.key === 'Escape') closePhotoViewer();
+      if (e.key === 'ArrowLeft') pvNavigate(-1);
+      if (e.key === 'ArrowRight') pvNavigate(1);
+    } else if (gal.classList.contains('active')) {
+      if (e.key === 'Escape') closeGallery();
+    }
+  });
+
+  document.getElementById('photoViewer').addEventListener('click', function(e) {
+    if (e.target === this) closePhotoViewer();
+  });
+</script>
+
+<script>
+  function togglePortfolio() {
+    const extras = document.querySelectorAll('.portfolio-extra');
+    const btn = document.getElementById('btnMore');
+    const btnText = document.getElementById('btnMoreText');
+    const icon = document.getElementById('btnMoreIcon');
+    const isOpen = btn.classList.contains('open');
+
+    if (!isOpen) {
+      extras.forEach(el => { el.classList.remove('extra-hidden'); });
+      btnText.textContent = 'Weniger anzeigen';
+      btn.classList.add('open');
+    } else {
+      extras.forEach(el => { el.classList.add('extra-hidden'); });
+      btnText.textContent = 'Mehr anzeigen';
+      btn.classList.remove('open');
+      // Sanft zurück zum Portfolio-Anfang scrollen
+      document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Portfolio-Filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const moreBtnWrap = document.getElementById('btnMore').parentElement;
+
+  filterBtns.forEach(fbtn => {
+    fbtn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      fbtn.classList.add('active');
+      const filter = fbtn.dataset.filter;
+      const items = document.querySelectorAll('.portfolio-item');
+
+      if (filter === 'all') {
+        moreBtnWrap.style.display = '';
+        items.forEach(item => item.classList.remove('filtered-out'));
+        // "Mehr anzeigen" Zustand respektieren
+        const isOpen = document.getElementById('btnMore').classList.contains('open');
+        document.querySelectorAll('.portfolio-extra').forEach(el => {
+          el.classList.toggle('extra-hidden', !isOpen);
+        });
+      } else {
+        moreBtnWrap.style.display = 'none';
+        // Bei einem konkreten Filter zählt nur die Kategorie,
+        // der "Mehr anzeigen"-Zustand wird ignoriert (alle passenden Bilder sichtbar)
+        document.querySelectorAll('.portfolio-extra').forEach(el => el.classList.remove('extra-hidden'));
+        items.forEach(item => {
+          item.classList.toggle('filtered-out', item.dataset.category !== filter);
+        });
+      }
+    });
+  });
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  function closeMobile() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  document.getElementById('KontaktForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value.trim();
+    if (!name || !email || !subject || !message) { alert('Bitte fülle alle Pflichtfelder aus.'); return; }
+
+    const submitBtn = form.querySelector('.btn-submit');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Wird gesendet...';
+
+    fetch('https://formspree.io/f/xpqgkwpj', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          document.getElementById('formSuccess').style.display = 'block';
+          setTimeout(() => document.getElementById('formSuccess').style.display = 'none', 5000);
+        } else {
+          alert('Es gab ein Problem beim Senden. Bitte versuche es später erneut oder schreib mir direkt eine E-Mail.');
+        }
+      })
+      .catch(() => {
+        alert('Es gab ein Problem beim Senden. Bitte versuche es später erneut oder schreib mir direkt eine E-Mail.');
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      });
+  });
+</script>
+</body>
+</html>
