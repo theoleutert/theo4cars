@@ -70,87 +70,102 @@
     <p class="section-label fade-up">Meine Arbeiten</p>
     <h2 class="section-title fade-up">Portfolio</h2>
 
-    <div class="portfolio-filters fade-up" id="portfolioFilters">
-      <button class="filter-btn active" data-filter="all">Alle Fotos</button>
-      <button class="filter-btn" data-filter="shooting">Fotoshootings</button>
-      <button class="filter-btn" data-filter="event">Events</button>
-      <button class="filter-btn" data-filter="spot">Spots</button>
+    <div class="portfolio-controls fade-up" id="portfolioControls">
+      <button type="button" class="pc-trigger" id="pcTrigger" aria-haspopup="true" aria-expanded="false" aria-controls="pcPanel">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16M3 16l4 4 4-4"/><path d="M17 20V4M13 8l4-4 4 4"/></svg>
+        <span id="pcTriggerText">Alle Fotos · Neueste zuerst</span>
+        <svg class="pc-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="pc-panel" id="pcPanel" role="menu">
+        <div class="pc-col" role="group" aria-label="Kategorie">
+          <p class="pc-col-title">Kategorie</p>
+        <button type="button" class="pc-opt active" data-filter="all" role="menuitemradio" aria-checked="true"><span class="pc-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Alle Fotos</button>
+        <button type="button" class="pc-opt" data-filter="shooting" role="menuitemradio" aria-checked="false"><span class="pc-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Fotoshootings</button>
+        <button type="button" class="pc-opt" data-filter="event" role="menuitemradio" aria-checked="false"><span class="pc-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Events</button>
+        <button type="button" class="pc-opt" data-filter="spot" role="menuitemradio" aria-checked="false"><span class="pc-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Spots</button>
+        </div>
+        <div class="pc-col" role="group" aria-label="Sortierung">
+          <p class="pc-col-title">Sortierung</p>
+        <button type="button" class="pc-opt active" data-sort="newest" role="menuitemradio" aria-checked="true"><span class="pc-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Neueste zuerst</button>
+        <button type="button" class="pc-opt" data-sort="oldest" role="menuitemradio" aria-checked="false"><span class="pc-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Älteste zuerst</button>
+        </div>
+      </div>
     </div>
 
     <div class="portfolio-grid" id="portfolioGrid">
 
-      <div class="portfolio-item fade-up" data-category="event" onclick="openGallery('golf')">
+      <div class="portfolio-item fade-up" data-category="event" data-date="2026-08-09" onclick="openGallery('golf')">
         <img src="img/Golf/golf.jpg" alt="Ferrari und Golf"/>
          <div class="portfolio-overlay"><span>Ferrari und Golf</span></div>
 </div>
 
-      <div class="portfolio-item fade-up" data-category="shooting" onclick="openGallery('bmw')">
+      <div class="portfolio-item fade-up" data-category="shooting" data-date="2025-05-18" onclick="openGallery('bmw')">
   <img src="img/BMW/BMW.jpg" alt="BMW M5 und M4"/>
   <div class="portfolio-overlay"><span>BMW M5 und M4</span></div>
 </div>
 
-      <div class="portfolio-item fade-up" data-category="spot" onclick="openGallery('mclaren')">
+      <div class="portfolio-item fade-up" data-category="spot" data-date="2024-09-29" onclick="openGallery('mclaren')">
         <img src="img/720s/720s.jpg" alt="McLaren 720s"/>
         <div class="portfolio-overlay"><span>McLaren 720s</span></div>
 </div>
 
       
-      <div class="portfolio-item fade-up" data-category="event" onclick="openGallery('aarberg')">
+      <div class="portfolio-item fade-up" data-category="event" data-date="2025-08-17" onclick="openGallery('aarberg')">
         <img src="img/Aarberg/Aarberg.jpg" alt="Ferrari Treffen Aarberg"/>
          <div class="portfolio-overlay"><span>Ferrari Treffen Aarberg</span></div>
 </div>
 
-      <div class="portfolio-item fade-up" data-category="shooting" onclick="openGallery('e63')">
+      <div class="portfolio-item fade-up" data-category="shooting" data-date="2025-11-22" onclick="openGallery('e63')">
         <img src="img/E63/E63.jpg" alt="Mercedes E63"/>
         <div class="portfolio-overlay"><span>Mercedes E63</span></div>
       </div>
 
-      <div class="portfolio-item fade-up" data-category="shooting" onclick="openGallery('rs4')">
+      <div class="portfolio-item fade-up" data-category="shooting" data-date="2026-01-03" onclick="openGallery('rs4')">
         <img src="img/RS4/RS4.jpg" alt="Audi RS4"/>
         <div class="portfolio-overlay"><span>Audi RS4</span></div>
       </div>
 
-      <div class="portfolio-item portfolio-extra extra-hidden fade-up" data-category="shooting" onclick="openGallery('fordgt')">
+      <div class="portfolio-item portfolio-extra extra-hidden fade-up" data-category="shooting" data-date="2024-10-23" onclick="openGallery('fordgt')">
         <img src="img/MKIV/MKIV.jpg" alt="Ford GT MKIV"/>
         <div class="portfolio-overlay"><span>Ford GT MKIV</span></div>
       </div>
 
-      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" onclick="openGallery('autozh')">
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" data-date="2025-10-29" onclick="openGallery('autozh')">
         <img src="img/AutoZH/AutoZH.jpg" alt="AutoZH"/>
         <div class="portfolio-overlay"><span>Auto Zürich 2025 Media Day</span></div>
       </div>
 
-      <div class="portfolio-item portfolio-extra extra-hidden" data-category="shooting" onclick="openGallery('huracan')">
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="shooting" data-date="2025-11-28" onclick="openGallery('huracan')">
         <img src="img/Huracan/Huracan.jpg" alt="Lamborghini Huracán"/>
         <div class="portfolio-overlay"><span>Lamborghini Huracán</span></div>
       </div>
 
-      <div class="portfolio-item portfolio-extra extra-hidden" data-category="spot" onclick="openGallery('chiron')">
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="spot" data-date="2025-03-09" onclick="openGallery('chiron')">
         <img src="img/Chiron/Chiron.jpg" alt="Bugatti Chiron"/>
         <div class="portfolio-overlay"><span>Bugatti Chiron</span></div>
       </div>
 
-      <div class="portfolio-item portfolio-extra extra-hidden" data-category="shooting" onclick="openGallery('gt3rs')">
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="shooting" data-date="2026-03-21" onclick="openGallery('gt3rs')">
         <img src="img/GT3RS/GT3RS.jpg" alt="Porsche 992 GT3RS"/>
         <div class="portfolio-overlay"><span>Porsche 992 GT3RS</span></div>
       </div>
 
-      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" onclick="openGallery('theice')">
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" data-date="2025-02-22" onclick="openGallery('theice')">
         <img src="img/Theice/Theice.jpg" alt="Agera Prototype"/>
         <div class="portfolio-overlay"><span>The ICE 2025</span></div>
       </div>
 
-      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" onclick="openGallery('como')">
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" data-date="2026-05-16" onclick="openGallery('como')">
         <img src="img/Como/Como.jpg" alt="Como Porsche"/>
         <div class="portfolio-overlay"><span>FuoriConcorso 2026</span></div>
       </div>
 
-      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" onclick="openGallery('broadarrow')">
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" data-date="2026-11-07" onclick="openGallery('broadarrow')">
         <img src="img/BroadArrow/BroadArrow_1.jpg" alt="BroadArrow"/>
         <div class="portfolio-overlay"><span>The Zurich Auction by Broad Arrow</span></div>
       </div>
 
-      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" onclick="openGallery('autozh26')">
+      <div class="portfolio-item portfolio-extra extra-hidden" data-category="event" data-date="2026-11-04" onclick="openGallery('autozh26')">
         <img src="img/AutoZH26/AutoZH26.jpg" alt="AutoZH26"/>
         <div class="portfolio-overlay"><span>Auto Zürich 2026 Media Day</span></div>
       </div>
@@ -635,56 +650,97 @@
 </script>
 
 <script>
-  function togglePortfolio() {
-    const extras = document.querySelectorAll('.portfolio-extra');
-    const btn = document.getElementById('btnMore');
-    const btnText = document.getElementById('btnMoreText');
-    const icon = document.getElementById('btnMoreIcon');
-    const isOpen = btn.classList.contains('open');
+  const PORTFOLIO_VISIBLE_COUNT = 6; 
+  const portfolioGrid = document.getElementById('portfolioGrid');
+  const portfolioItems = Array.from(portfolioGrid.querySelectorAll('.portfolio-item'));
+  const filterBtns = document.querySelectorAll('#pcPanel [data-filter]');
+  const sortBtns = document.querySelectorAll('#pcPanel [data-sort]');
+  const moreBtn = document.getElementById('btnMore');
+  const moreBtnWrap = moreBtn.parentElement;
+  const moreBtnText = document.getElementById('btnMoreText');
 
-    if (!isOpen) {
-      extras.forEach(el => { el.classList.remove('extra-hidden'); });
-      btnText.textContent = 'Weniger anzeigen';
-      btn.classList.add('open');
-    } else {
-      extras.forEach(el => { el.classList.add('extra-hidden'); });
-      btnText.textContent = 'Mehr anzeigen';
-      btn.classList.remove('open');
-      // Sanft zurück zum Portfolio-Anfang scrollen
+  let currentFilter = 'all';
+  let currentSort = 'newest';
+  let showAll = false;
+
+  portfolioItems.forEach((el, i) => { el.dataset.order = i; });
+
+  function applyPortfolioView() {
+    const sorted = portfolioItems.slice().sort((a, b) => {
+      const da = a.dataset.date || '';
+      const db = b.dataset.date || '';
+      if (da !== db) return currentSort === 'newest' ? db.localeCompare(da) : da.localeCompare(db);
+      return a.dataset.order - b.dataset.order;
+    });
+
+    let shown = 0;
+    sorted.forEach(el => {
+      portfolioGrid.appendChild(el);
+      const match = currentFilter === 'all' || el.dataset.category === currentFilter;
+      let hidden = false;
+      if (match) {
+        shown++;
+        
+        hidden = currentFilter === 'all' && !showAll && shown > PORTFOLIO_VISIBLE_COUNT;
+      }
+      el.classList.toggle('filtered-out', !match);
+      el.classList.toggle('extra-hidden', hidden);
+      el.classList.toggle('portfolio-extra', match && currentFilter === 'all' && shown > PORTFOLIO_VISIBLE_COUNT);
+    });
+
+    moreBtnWrap.style.display = currentFilter === 'all' ? '' : 'none';
+  }
+
+  function togglePortfolio() {
+    showAll = !showAll;
+    moreBtn.classList.toggle('open', showAll);
+    moreBtnText.textContent = showAll ? 'Weniger anzeigen' : 'Mehr anzeigen';
+    applyPortfolioView();
+    if (!showAll) {
       document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
     }
   }
 
-  // Portfolio-Filter
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const moreBtnWrap = document.getElementById('btnMore').parentElement;
+  const pcTrigger = document.getElementById('pcTrigger');
+  const pcControls = document.getElementById('portfolioControls');
+  const pcTriggerText = document.getElementById('pcTriggerText');
 
-  filterBtns.forEach(fbtn => {
-    fbtn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      fbtn.classList.add('active');
-      const filter = fbtn.dataset.filter;
-      const items = document.querySelectorAll('.portfolio-item');
+  function selectOption(group, btn) {
+    group.forEach(b => {
+      const on = b === btn;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-checked', on ? 'true' : 'false');
+    });
+    const f = document.querySelector('#pcPanel [data-filter].active').textContent.trim();
+    const s = document.querySelector('#pcPanel [data-sort].active').textContent.trim();
+    pcTriggerText.textContent = f + ' · ' + s;
+  }
 
-      if (filter === 'all') {
-        moreBtnWrap.style.display = '';
-        items.forEach(item => item.classList.remove('filtered-out'));
-        // "Mehr anzeigen" Zustand respektieren
-        const isOpen = document.getElementById('btnMore').classList.contains('open');
-        document.querySelectorAll('.portfolio-extra').forEach(el => {
-          el.classList.toggle('extra-hidden', !isOpen);
-        });
-      } else {
-        moreBtnWrap.style.display = 'none';
-        // Bei einem konkreten Filter zählt nur die Kategorie,
-        // der "Mehr anzeigen"-Zustand wird ignoriert (alle passenden Bilder sichtbar)
-        document.querySelectorAll('.portfolio-extra').forEach(el => el.classList.remove('extra-hidden'));
-        items.forEach(item => {
-          item.classList.toggle('filtered-out', item.dataset.category !== filter);
-        });
-      }
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      selectOption(filterBtns, btn);
+      currentFilter = btn.dataset.filter;
+      applyPortfolioView();
     });
   });
+
+  sortBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      selectOption(sortBtns, btn);
+      currentSort = btn.dataset.sort;
+      applyPortfolioView();
+    });
+  });
+
+  function setPanel(open) {
+    pcControls.classList.toggle('open', open);
+    pcTrigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  pcTrigger.addEventListener('click', () => setPanel(!pcControls.classList.contains('open')));
+  document.addEventListener('click', e => { if (!pcControls.contains(e.target)) setPanel(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setPanel(false); });
+
+  applyPortfolioView();
 
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
