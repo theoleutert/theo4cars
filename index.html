@@ -245,6 +245,12 @@
                 >Spots
               </button>
             </div>
+            <div class="pc-col" role="group" aria-label="Fotoart">
+              <p class="pc-col-title">Fotoart</p>
+              <button type="button" class="pc-opt active" data-device="mixed" role="menuitemradio" aria-checked="true"><span class="pc-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg></span>Gemischte Fotos</button>
+              <button type="button" class="pc-opt" data-device="camera" role="menuitemradio" aria-checked="false"><span class="pc-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg></span>Kamerafotos</button>
+              <button type="button" class="pc-opt" data-device="phone" role="menuitemradio" aria-checked="false"><span class="pc-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg></span>Handyfotos</button>
+            </div>
             <div class="pc-col" role="group" aria-label="Sortierung">
               <p class="pc-col-title">Sortierung</p>
               <button
@@ -293,11 +299,18 @@
           </div>
         </div>
 
+        <!-- ============================================================
+           FOTOART je Set: data-device="camera" (Kamera), "phone" (Handy)
+           oder beides: data-device="camera phone" (Set enthaelt beides).
+           Aktuell Platzhalter: Spots = Handy, alles andere = Kamera
+           -> bitte pro Set anpassen.
+           ============================================================ -->
         <div class="portfolio-grid" id="portfolioGrid">
           <div
             class="portfolio-item fade-up"
             data-category="event"
             data-date="2026-08-09"
+            data-device="camera"
             onclick="openGallery('golf')"
           >
             <img src="img/Golf/golf.jpg" alt="Ferrari und Golf" />
@@ -308,6 +321,7 @@
             class="portfolio-item fade-up"
             data-category="shooting"
             data-date="2025-05-18"
+            data-device="camera"
             onclick="openGallery('bmw')"
           >
             <img src="img/BMW/BMW.jpg" alt="BMW M5 und M4" />
@@ -318,6 +332,7 @@
             class="portfolio-item fade-up"
             data-category="spot"
             data-date="2024-09-29"
+            data-device="camera"
             onclick="openGallery('mclaren')"
           >
             <img src="img/720s/720s.jpg" alt="McLaren 720s" />
@@ -328,6 +343,7 @@
             class="portfolio-item fade-up"
             data-category="event"
             data-date="2025-08-17"
+            data-device="camera"
             onclick="openGallery('aarberg')"
           >
             <img src="img/Aarberg/Aarberg.jpg" alt="Ferrari Treffen Aarberg" />
@@ -340,6 +356,7 @@
             class="portfolio-item fade-up"
             data-category="shooting"
             data-date="2025-11-22"
+            data-device="camera"
             onclick="openGallery('e63')"
           >
             <img src="img/E63/E63.jpg" alt="Mercedes E63" />
@@ -350,6 +367,7 @@
             class="portfolio-item fade-up"
             data-category="shooting"
             data-date="2026-01-03"
+            data-device="camera"
             onclick="openGallery('rs4')"
           >
             <img src="img/RS4/RS4.jpg" alt="Audi RS4" />
@@ -357,9 +375,10 @@
           </div>
 
           <div
-            class="portfolio-item portfolio-extra extra-hidden fade-up"
+            class="portfolio-item fade-up"
             data-category="shooting"
             data-date="2024-10-23"
+            data-device="camera"
             onclick="openGallery('fordgt')"
           >
             <img src="img/MKIV/MKIV.jpg" alt="Ford GT MKIV" />
@@ -367,9 +386,10 @@
           </div>
 
           <div
-            class="portfolio-item portfolio-extra extra-hidden"
+            class="portfolio-item"
             data-category="event"
             data-date="2025-10-29"
+            data-device="camera"
             onclick="openGallery('autozh')"
           >
             <img src="img/AutoZH/AutoZH.jpg" alt="AutoZH" />
@@ -379,9 +399,10 @@
           </div>
 
           <div
-            class="portfolio-item portfolio-extra extra-hidden"
+            class="portfolio-item"
             data-category="shooting"
             data-date="2025-11-28"
+            data-device="camera"
             onclick="openGallery('huracan')"
           >
             <img src="img/Huracan/Huracan.jpg" alt="Lamborghini Huracán" />
@@ -391,9 +412,10 @@
           </div>
 
           <div
-            class="portfolio-item portfolio-extra extra-hidden"
+            class="portfolio-item"
             data-category="spot"
             data-date="2025-03-09"
+            data-device="camera"
             onclick="openGallery('chiron')"
           >
             <img src="img/Chiron/Chiron.jpg" alt="Bugatti Chiron" />
@@ -401,9 +423,10 @@
           </div>
 
           <div
-            class="portfolio-item portfolio-extra extra-hidden"
+            class="portfolio-item"
             data-category="shooting"
             data-date="2026-03-21"
+            data-device="camera"
             onclick="openGallery('gt3rs')"
           >
             <img src="img/GT3RS/GT3RS.jpg" alt="Porsche 992 GT3RS" />
@@ -411,9 +434,10 @@
           </div>
 
           <div
-            class="portfolio-item portfolio-extra extra-hidden"
+            class="portfolio-item"
             data-category="event"
             data-date="2025-02-22"
+            data-device="camera"
             onclick="openGallery('theice')"
           >
             <img src="img/Theice/Theice.jpg" alt="Agera Prototype" />
@@ -421,9 +445,10 @@
           </div>
 
           <div
-            class="portfolio-item portfolio-extra extra-hidden"
+            class="portfolio-item"
             data-category="event"
             data-date="2026-05-16"
+            data-device="phone"
             onclick="openGallery('como')"
           >
             <img src="img/Como/Como.jpg" alt="Como Porsche" />
@@ -431,9 +456,10 @@
           </div>
 
           <div
-            class="portfolio-item portfolio-extra extra-hidden"
+            class="portfolio-item"
             data-category="event"
             data-date="2026-11-07"
+            data-device="phone"
             onclick="openGallery('broadarrow')"
           >
             <img src="img/BroadArrow/BroadArrow_1.jpg" alt="BroadArrow" />
@@ -443,9 +469,10 @@
           </div>
 
           <div
-            class="portfolio-item portfolio-extra extra-hidden"
+            class="portfolio-item"
             data-category="event"
             data-date="2026-11-04"
+            data-device="phone"
             onclick="openGallery('autozh26')"
           >
             <img src="img/AutoZH26/AutoZH26.jpg" alt="AutoZH26" />
@@ -455,15 +482,18 @@
           </div>
 
           <div
-            class="portfolio-item portfolio-extra extra-hidden"
+            class="portfolio-item"
             data-category="shooting"
             data-date="2025-09-28"
+            data-device="phone"
             onclick="openGallery('bmw2')"
           >
             <img src="img/BMW2/BMW2.jpg" alt="BMW2" />
             <div class="portfolio-overlay"><span>BMW M5 und M4 II</span></div>
           </div>
         </div>
+
+        <p class="portfolio-empty" id="portfolioEmpty" hidden>Keine Fotosets in dieser Auswahl.</p>
 
         <div style="text-align: center; margin-top: 2.5rem">
           <button class="btn-more" id="btnMore" onclick="togglePortfolio()">
@@ -1096,19 +1126,22 @@
 
     <script>
       // ===== Portfolio: Filter + Sortierung nach Aufnahmedatum =====
-      const PORTFOLIO_VISIBLE_COUNT = 6; // so viele Eintraege sind bei "Alle Fotos" ohne "Mehr anzeigen" sichtbar
+      const PORTFOLIO_VISIBLE_COUNT = 6; // so viele Sets sind ohne "Mehr anzeigen" sichtbar (gilt fuer jede Auswahl)
       const portfolioGrid = document.getElementById("portfolioGrid");
       const portfolioItems = Array.from(
         portfolioGrid.querySelectorAll(".portfolio-item"),
       );
       const filterBtns = document.querySelectorAll("#pcPanel [data-filter]");
       const sortBtns = document.querySelectorAll("#pcPanel [data-sort]");
+      const deviceBtns = document.querySelectorAll("#pcPanel [data-device]");
+      const emptyMsg = document.getElementById("portfolioEmpty");
       const moreBtn = document.getElementById("btnMore");
       const moreBtnWrap = moreBtn.parentElement;
       const moreBtnText = document.getElementById("btnMoreText");
 
       let currentFilter = "all";
       let currentSort = "newest"; // 'newest' | 'oldest'
+      let currentDevice = "mixed"; // 'mixed' | 'camera' | 'phone'
       let showAll = false;
 
       // Urspruengliche Reihenfolge merken (Fallback bei gleichem/fehlendem Datum)
@@ -1130,26 +1163,37 @@
         let shown = 0;
         sorted.forEach((el) => {
           portfolioGrid.appendChild(el); // DOM-Reihenfolge neu setzen
-          const match =
+          const matchCat =
             currentFilter === "all" || el.dataset.category === currentFilter;
+          const matchDev =
+            currentDevice === "mixed" ||
+            (el.dataset.device || "").split(/\s+/).includes(currentDevice);
+          const match = matchCat && matchDev;
           let hidden = false;
           if (match) {
             shown++;
-            // Begrenzung nur bei "Alle Fotos"; bei einem Filter sind alle passenden Bilder sichtbar
-            hidden =
-              currentFilter === "all" &&
-              !showAll &&
-              shown > PORTFOLIO_VISIBLE_COUNT;
+            // Begrenzung gilt fuer jede Auswahl: ab dem 7. Set versteckt, bis "Mehr anzeigen"
+            hidden = !showAll && shown > PORTFOLIO_VISIBLE_COUNT;
           }
           el.classList.toggle("filtered-out", !match);
           el.classList.toggle("extra-hidden", hidden);
           el.classList.toggle(
             "portfolio-extra",
-            match && currentFilter === "all" && shown > PORTFOLIO_VISIBLE_COUNT,
+            match && shown > PORTFOLIO_VISIBLE_COUNT,
           );
         });
 
-        moreBtnWrap.style.display = currentFilter === "all" ? "" : "none";
+        // Button nur zeigen, wenn es mehr als 6 passende Sets gibt
+        moreBtnWrap.style.display =
+          shown > PORTFOLIO_VISIBLE_COUNT ? "" : "none";
+        emptyMsg.hidden = shown > 0;
+      }
+
+      // Bei Wechsel von Kategorie/Fotoart wieder auf "6 Sets" zuruecksetzen
+      function collapsePortfolio() {
+        showAll = false;
+        moreBtn.classList.remove("open");
+        moreBtnText.textContent = "Mehr anzeigen";
       }
 
       function togglePortfolio() {
@@ -1179,16 +1223,31 @@
         const f = document
           .querySelector("#pcPanel [data-filter].active")
           .textContent.trim();
+        const d = document.querySelector("#pcPanel [data-device].active");
         const s = document
           .querySelector("#pcPanel [data-sort].active")
           .textContent.trim();
-        pcTriggerText.textContent = f + " · " + s;
+        // Fotoart nur anzeigen, wenn nicht "Gemischte Fotos" (Standard)
+        const parts = [f];
+        if (d.dataset.device !== "mixed") parts.push(d.textContent.trim());
+        parts.push(s);
+        pcTriggerText.textContent = parts.join(" · ");
       }
 
       filterBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
           selectOption(filterBtns, btn);
           currentFilter = btn.dataset.filter;
+          collapsePortfolio();
+          applyPortfolioView();
+        });
+      });
+
+      deviceBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          selectOption(deviceBtns, btn);
+          currentDevice = btn.dataset.device;
+          collapsePortfolio();
           applyPortfolioView();
         });
       });

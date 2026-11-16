@@ -312,6 +312,7 @@
       color: var(--white);
     }
 
+    /* Filter & Sortierung (Portfolio) - ein Dropdown, einheitlich eckig (2px) */
     .portfolio-controls {
       position: relative;
       z-index: 20;
@@ -346,9 +347,9 @@
       position: absolute;
       top: calc(100% + 0.5rem);
       left: 0;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      min-width: 440px;
+      min-width: 620px;
       padding: 1.25rem 1rem 1rem;
       background: var(--navy-mid);
       border: 1.5px solid rgba(255,255,255,0.18);
@@ -386,6 +387,13 @@
     .pc-opt.active { color: var(--white); font-weight: 400; }
     .pc-check { display: inline-flex; width: 14px; color: var(--orange); visibility: hidden; }
     .pc-opt.active .pc-check { visibility: visible; }
+
+    @media (max-width: 720px) {
+      .portfolio-controls { display: block; }
+      .pc-trigger { width: 100%; justify-content: space-between; }
+      .pc-trigger span { flex: 1; text-align: left; }
+      .pc-panel { min-width: 0; width: 100%; grid-template-columns: 1fr; gap: 0.75rem; }
+    }
 
     @media (max-width: 520px) {
       .portfolio-controls { display: block; }
@@ -858,3 +866,10 @@
       .pv-prev { left: 0.5rem; }
       .pv-next { right: 0.5rem; }
     }
+    .portfolio-empty {
+      text-align: center;
+      color: var(--gray);
+      font-size: 0.95rem;
+      padding: 2rem 0;
+    }
+    .portfolio-empty[hidden] { display: none; }
