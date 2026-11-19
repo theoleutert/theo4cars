@@ -363,7 +363,7 @@
           <div
             class="portfolio-item fade-up"
             data-category="event"
-            data-date="2026-08-09"
+            data-date="2026-08-13"
             data-device="camera"
             onclick="openGallery('golf')"
           >
@@ -400,9 +400,12 @@
             data-device="camera"
             onclick="openGallery('aarberg')"
           >
-            <img src="img/Aarberg/Aarberg.jpg" alt="Ferrari Treffen Aarberg" />
+            <img
+              src="img/Aarberg/Aarberg.jpg"
+              alt="Ferrari Treffen Aarberg 2025"
+            />
             <div class="portfolio-overlay">
-              <span>Ferrari Treffen Aarberg</span>
+              <span>Ferrari Treffen Aarberg 2025</span>
             </div>
           </div>
 
@@ -545,6 +548,19 @@
             <img src="img/BMW2/BMW2.jpg" alt="BMW2" />
             <div class="portfolio-overlay"><span>BMW M5 und M4 II</span></div>
           </div>
+
+          <div
+            class="portfolio-item"
+            data-category="event"
+            data-date="2025-07-25"
+            data-device="phone"
+            onclick="openGallery('tegernsee')"
+          >
+            <img src="img/Tegernsee/Tegernsee.jpg" alt="Tegernsee" />
+            <div class="portfolio-overlay">
+              <span>Tegernsee Concours of Elegance Germany 2025</span>
+            </div>
+          </div>
         </div>
 
         <p class="portfolio-empty" id="portfolioEmpty" hidden>
@@ -629,7 +645,6 @@
 
     <div class="divider"></div>
 
-    <!-- Kontakt -->
     <section id="Kontakt">
       <div class="Kontakt-inner">
         <p class="section-label fade-up">Kontakt</p>
@@ -896,6 +911,7 @@
         },
         aarberg: {
           title: "Ferrari Treffen Aarberg",
+          heading: "[Ferrari Treffen] Aarberg 2025",
           photos: [
             "img/Aarberg/Aarberg.jpg",
             "img/Aarberg/Aarberg_2.jpg",
@@ -945,6 +961,7 @@
         },
         autozh: {
           title: "Auto Zürich 2025 Media Day",
+          heading: "[Auto Zürich] 2025 Media Day",
           photos: [
             "img/AutoZH/AutoZH.jpg",
             "img/AutoZH/AutoZH_2.jpg",
@@ -994,6 +1011,7 @@
         },
         theice: {
           title: "The ICE 2025",
+          heading: "[The ICE] 2025",
           photos: [
             "img/Theice/Theice.jpg",
             "img/Theice/Theice_2.jpg",
@@ -1034,6 +1052,7 @@
 
         broadarrow: {
           title: "The Zurich Auction by Broad Arrow",
+          heading: "[The Zurich Auction] by Broad Arrow",
           photos: [
             "img/BroadArrow/BroadArrow_1.jpg",
             "img/BroadArrow/BroadArrow_2.jpg",
@@ -1056,6 +1075,7 @@
 
         autozh26: {
           title: "Auto Zürich 2026 Media Day",
+          heading: "[Auto Zürich] 2026 Media Day",
           photos: [
             "img/AutoZH26/AutoZH26.jpg",
             "img/AutoZH26/AutoZH26_2.jpg",
@@ -1094,6 +1114,31 @@
             "img/BMW2/BMW2_9.jpg",
           ],
         },
+
+        tegernsee: {
+          title: "Tegernsee Concours of Elegance Germany 2025",
+          heading: "Tegernsee [Concours of Elegance Germany] 2025",
+          photos: [
+            "img/Tegernsee/Tegernsee.jpg",
+            "img/Tegernsee/Tegernsee_2.jpg",
+            "img/Tegernsee/Tegernsee_3.jpg",
+            "img/Tegernsee/Tegernsee_4.jpg",
+            "img/Tegernsee/Tegernsee_5.jpg",
+            "img/Tegernsee/Tegernsee_6.jpg",
+            "img/Tegernsee/Tegernsee_7.jpg",
+            "img/Tegernsee/Tegernsee_8.jpg",
+            "img/Tegernsee/Tegernsee_9.jpg",
+            "img/Tegernsee/Tegernsee_10.jpg",
+            "img/Tegernsee/Tegernsee_11.jpg",
+            "img/Tegernsee/Tegernsee_12.jpg",
+            "img/Tegernsee/Tegernsee_13.jpg",
+            "img/Tegernsee/Tegernsee_14.jpg",
+            "img/Tegernsee/Tegernsee_15.jpg",
+            "img/Tegernsee/Tegernsee_16.jpg",
+            "img/Tegernsee/Tegernsee_17.jpg",
+            "img/Tegernsee/Tegernsee_18.jpg",
+          ],
+        },
       };
 
       let currentGallery = null;
@@ -1104,13 +1149,22 @@
         if (!gal) return;
         currentGallery = gal;
 
-        const words = gal.title.split(" ");
-        const first = words.shift();
-        document.getElementById("galTitle").innerHTML =
-          "<span>" +
-          first +
-          "</span>" +
-          (words.length ? " " + words.join(" ") : "");
+        const raw = gal.heading || gal.title;
+        let html;
+        if (raw.includes("[")) {
+          // Wörter in [eckigen Klammern] werden orange
+          html = raw.replace(/\[(.+?)\]/g, "<span>$1</span>");
+        } else {
+          // Fallback: erstes Wort orange (wie bisher)
+          const words = raw.split(" ");
+          const first = words.shift();
+          html =
+            "<span>" +
+            first +
+            "</span>" +
+            (words.length ? " " + words.join(" ") : "");
+        }
+        document.getElementById("galTitle").innerHTML = html;
 
         const n = gal.photos.length;
         document.getElementById("galCount").textContent =
